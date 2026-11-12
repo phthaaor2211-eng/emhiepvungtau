@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HENRY'S STORY - Góc đọc những câu chuyện từ nhiều góc nhìn.">
+  <title>HENRY'S STORY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Thanh đầu trang: logo và điều hướng chính -->
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Về trang chủ">
+      <span class="brand-mark">H</span>
+      <span>HENRY'S <b>STORY</b><small>STORIES • PERSPECTIVES • REFLECTIONS</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Điều hướng">
+      <a class="active" href="#home">Trang chủ</a>
+      <a href="#topics">Chủ đề</a>
+      <a href="#about">Giới thiệu</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <!-- Phần mở đầu: lời giới thiệu và nút khám phá -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A LITTLE SPACE FOR STORIES</p>
+        <h1>Mỗi câu chuyện<br><em>đều có nhiều góc nhìn.</em></h1>
+        <p class="hero-description">Có những câu chuyện được vẽ ra, nhưng cũng có câu chuyện thật sự đã xảy ra...</p>
+        <a class="primary-button" href="#topics">Khám phá câu chuyện <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-label="Trang trí hoa hồng">
+        <span class="art-orbit orbit-one"></span>
+        <span class="art-orbit orbit-two"></span>
+        <span class="art-flower">✿</span>
+        <span class="art-caption">THE STORY<br>CONTINUES</span>
+      </div>
+    </section>
+
+    <!-- Thanh thông tin: giải thích ngắn mục đích của website -->
+    <section class="notice-strip">
+      <span class="notice-icon">✦</span>
+      <p><b>Góc đọc cộng đồng</b> — Nội dung được biên tập trước khi đăng. Hãy tôn trọng quyền riêng tư và kiểm chứng thông tin.</p>
+    </section>
+
+    <!-- Khu vực chủ đề: mỗi thẻ dẫn tới danh sách bài viết tương ứng -->
+    <section class="section" id="topics">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BROWSE BY CATEGORY</p>
+          <h2>Khám phá <em>chủ đề</em></h2>
+          <p class="section-note">Chọn một chủ đề để xem những câu chuyện bên trong.</p>
+        </div>
+        <span class="heading-decoration">01 / TOPICS</span>
+      </div>
+      <div class="topic-grid" id="topicGrid">
+        <!-- JavaScript tự tạo các thẻ chủ đề từ dữ liệu trong script.js -->
+      </div>
+    </section>
+
+    <!-- Khu vực bài viết: chỉ hiển thị bài do chủ website thêm trong code -->
+    <section class="section stories-section" id="stories">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE STORY ARCHIVE</p>
+          <h2 id="storyHeading">Câu chuyện <em>mới nhất</em></h2>
+          <p class="section-note" id="storySubheading">Một vài câu chuyện mẫu để xem thử bố cục website.</p>
+        </div>
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Tìm câu chuyện..." aria-label="Tìm câu chuyện">
+        </label>
+      </div>
+      <div class="story-grid" id="storyGrid">
+        <!-- JavaScript tự tạo thẻ bài viết từ dữ liệu trong script.js -->
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Chưa tìm thấy câu chuyện phù hợp.</p>
+    </section>
+
+    <!-- Giới thiệu: nêu nguyên tắc nội dung của website -->
+    <section class="about-panel" id="about">
+      <div class="about-symbol">H.</div>
+      <div>
+        <p class="eyebrow">ABOUT HENRY'S STORY</p>
+        <h2>Một câu chuyện.<br><em>Nhiều góc nhìn.</em></h2>
+        <p>HENRY'S STORY là nơi đọc và lưu trữ các câu chuyện đã được chọn lọc. Nội dung cần phân biệt rõ trải nghiệm cá nhân, ý kiến và thông tin đã được xác minh.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chân trang: thông tin bản quyền và lời nhắc -->
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">HENRY'S STORY</a>
+    <p>Read thoughtfully. Share responsibly.</p>
+    <small>© 2026 HENRY'S STORY · Nội dung do bunnie biên tập.</small>
+  </footer>
+
+  <!-- Hộp đọc chi tiết: mở ra khi người xem nhấn vào một thẻ bài viết -->
+  <dialog class="story-dialog" id="storyDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Đóng">×</button>
+    <p class="eyebrow" id="dialogCategory"></p>
+    <h2 id="dialogTitle"></h2>
+    <p class="dialog-meta" id="dialogMeta"></p>
+    <div class="dialog-body" id="dialogBody"></div>
+    <p class="dialog-reminder">Lưu ý: Hãy đọc nội dung với tinh thần cởi mở; không chia sẻ thông tin riêng tư hoặc xem cáo buộc chưa kiểm chứng là sự thật.</p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
